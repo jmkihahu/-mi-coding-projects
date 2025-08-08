@@ -2,6 +2,7 @@ import time
 
 students = []
 
+# creates a subroutine to print the rasults cleanly
 def preprint():
     print()
     for row in students:
@@ -9,8 +10,7 @@ def preprint():
             print(f"  {value:^10}",end = " | ")
         print()
     print()
-
-
+#subroutine to add contents in list to an actual file
 def write():
         print('Creating a new file')
 
