@@ -1,5 +1,7 @@
 import time,os
 
+#odk
+
 listas = [] 
 
 os.system("cls")
@@ -17,7 +19,7 @@ def write():
             print(f"Data saved to {name}")
         except Exception as e:
             print(f"Something went wrong! {e}")
-
+ 
 def preety_print():
     print("\n Current entries :")
     if not listas:
@@ -33,7 +35,9 @@ def entry():
     entry = True
     while entry:
         time.sleep(1)
+        print("\t\t === Add Name ===")
         print()
+
         name_1 = input("Enter your name : ").strip().lower()
         money_1 = float(input("enter money : ").strip())
 
@@ -49,6 +53,7 @@ def entry():
 def add_money():
     time.sleep(2)
     preety_print()
+    print("\t\t === Add Money === ")
     print()
     name_2 = input("enter your name:").strip().lower()
     for row in listas:
@@ -66,6 +71,9 @@ def subtract_money():
     print()
     preety_print()
     print()
+    
+    print("\t\t === Subtract Money === ")
+
     name_2 = input("enter your name: ").strip().lower()
     for row in listas:
         if row["name"] == name_2:
@@ -78,7 +86,7 @@ def subtract_money():
             time.sleep(1)
             print()
             print(f"money updated for \033[4m {name_2.title()} \033[0m ")
-        return
+            return
     print("Name not found")
 
 
@@ -93,7 +101,7 @@ def main():
                 4.Show entries
                 5.Quit
               """)
-        choice = int(input("Enter either [1-5]"))
+        choice = int(input("Enter either [1-5]:\n  "))
         if choice == 1 :
             entry()
 
