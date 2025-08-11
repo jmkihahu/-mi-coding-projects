@@ -17,6 +17,7 @@ def write():
                 for row in listas:
                     file.write(f"{row['name']} :: {row['money']}\n")
             print(f"Data saved to {name}")
+                exit()
         except Exception as e:
             print(f"Something went wrong! {e}")
  
@@ -118,7 +119,7 @@ def main():
             leave = input("Are you sure you would like to quit: ")
             if leave[0] == "y" or leave == "yes":
                 write()
-                break
+                
         else:
             print("Invalid choice. Please try again")
                         
